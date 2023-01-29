@@ -1,4 +1,5 @@
 {% extends 'base_auth.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -15,6 +16,7 @@
                     <div class="mb-4">
                         <input type="text" name="username" placeholder="Username" id="usernameFeild" class="form-control form-control-sm" />
                     </div>
+                    <div class="errorMsg_username invalid-feedback"></div>
                     <div class="mb-4">
                         <input type="email" name="email" placeholder="Email" id="emailFeild" class="form-control form-control-sm" />
                     </div>
@@ -32,6 +34,8 @@
     </div>
     <div class="col-md-4"></div>
 </div>
+
+<script src="{% static 'js/register.js' %}"></script>
 
 {% endblock %}
 
